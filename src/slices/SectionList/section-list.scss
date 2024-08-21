@@ -1,0 +1,64 @@
+@use "../../app/sass/variable";
+.section_list {
+  display: flex;
+  width: 100%;
+  background-color: variable.$primary-color;
+  color: variable.$background-white;
+  padding-block: variable.$gap-xl;
+  ul {
+    padding: variable.$gap-xl;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    gap: variable.$gap-xl;
+    text-transform: uppercase;
+    justify-content: center;
+    li {
+      display: flex;
+      gap: calc(variable.$gap-xl * 2);
+      border-bottom: variable.$border-light;
+      padding-bottom: variable.$gap-xl;
+      .value {
+        font-weight: 900;
+        font-size: variable.$font-xl;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .text {
+        flex: 3;
+        font-size: variable.$font-m;
+        display: flex;
+        max-width: 60%;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+    > :first-of-type {
+      color: variable.$secondary-color;
+    }
+    > :last-child {
+      border: none;
+      padding-bottom: none;
+    }
+  }
+}
+@media screen and (max-width: variable.$screen-tablet) {
+  .section_list {
+    ul {
+      li {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        .text{
+          font-size: 24px;
+          max-width: 100%;
+          text-align: center;
+        }
+        
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "format": "custom",
+  "id": "footer",
+  "label": "footer",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "contactemail": {
+        "type": "Text",
+        "config": {
+          "label": "ContactEmail",
+          "placeholder": ""
+        }
+      },
+      "adress": {
+        "type": "Text",
+        "config": {
+          "label": "Adress",
+          "placeholder": ""
+        }
+      },
+      "logo": {
+        "type": "Image",
+        "config": {
+          "label": "logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "linkedinlink": {
+        "type": "Link",
+        "config": {
+          "label": "LinkedinLink",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "instagramlink": {
+        "type": "Link",
+        "config": {
+          "label": "InstagramLink",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "gustlink": {
+        "type": "Link",
+        "config": {
+          "label": "GustLink",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "select": null
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "marquee": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

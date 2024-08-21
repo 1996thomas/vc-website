@@ -1,0 +1,39 @@
+@use "../../sass/variable";
+
+.button {
+  display: flex;
+  font-size: calc(variable.$font-s * .9);
+  font-weight: 500;
+  color: variable.$primary-color;
+  gap: 7px;
+  min-width: max-content;
+  line-height: variable.$line-height--heading;
+  > div {
+    padding: 7px;
+  }
+
+  a {
+    text-transform: uppercase;
+    background-color: variable.$secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 10px;
+  }
+  .arrow--icon {
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: variable.$secondary-color;
+    img{
+      transform: rotate(0);
+      transition: transform ease-out .2s;
+
+    }
+  }
+}
+.button:hover .arrow--icon img{
+  transform: rotate(45deg);
+  transition: transform ease-in .2s;
+}

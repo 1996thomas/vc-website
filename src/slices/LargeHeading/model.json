@@ -1,0 +1,58 @@
+{
+  "id": "large_heading",
+  "type": "SharedSlice",
+  "name": "LargeHeading",
+  "description": "LargeHeading",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2"
+          }
+        },
+        "align_center": {
+          "type": "Boolean",
+          "config": {
+            "label": "Align Center",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": false
+          }
+        },
+        "inverse_color": {
+          "type": "Boolean",
+          "config": {
+            "label": "Inverse Color",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "font_size": {
+          "type": "Select",
+          "config": {
+            "label": "Font Size",
+            "placeholder": "",
+            "options": [
+              "medium",
+              "large"
+            ],
+            "default_value": "medium"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

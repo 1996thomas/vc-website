@@ -1,0 +1,28 @@
+@use "./variable";
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.green-bg {
+  background-color: variable.$secondary-color;
+}
+.black-bg {
+  background-color: variable.$primary-color;
+}
+.white-bg {
+  background-color: variable.$background-white;
+  z-index: 0;
+  position: sticky;
+}
+.green-text {
+  color: variable.$secondary-color;
+}
+.black-text {
+  color: variable.$primary-color;
+}
+.white-text {
+  color: variable.$background-white;
+}
+

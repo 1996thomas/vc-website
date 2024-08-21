@@ -1,0 +1,66 @@
+{
+  "id": "playground",
+  "type": "SharedSlice",
+  "name": "Playground",
+  "description": "Playground",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading2"
+          }
+        },
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "devices": {
+          "type": "Group",
+          "config": {
+            "label": "Devices",
+            "repeat": true,
+            "fields": {
+              "device_type": {
+                "type": "Text",
+                "config": {
+                  "label": "Device Type",
+                  "placeholder": ""
+                }
+              },
+              "tagline": {
+                "type": "Text",
+                "config": {
+                  "label": "Tag Line",
+                  "placeholder": ""
+                }
+              },
+              "description": {
+                "type": "Text",
+                "config": {
+                  "label": "Description",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

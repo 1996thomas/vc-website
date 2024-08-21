@@ -1,0 +1,33 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"content": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "heading2",
+						"content": {
+							"text": "Corner"
+						}
+					}
+				]
+			},
+			"inverse_color": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"align_center": {
+				"__TYPE__": "BooleanContent",
+				"value": true
+			},
+			"font_size": {
+				"__TYPE__": "FieldContent",
+				"value": "medium",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]

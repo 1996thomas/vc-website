@@ -1,0 +1,113 @@
+@use "../../../sass/variable";
+.container {
+  width: 16rem;
+  .outerFrame {
+    width: 16rem;
+    aspect-ratio: 8/16;
+    border-radius: 3rem;
+    padding: 0.5rem;
+    background-color: black;
+    position: relative;
+  }
+  .innerFrame {
+    height: 100%;
+    border-radius: calc(3rem - 0.5rem);
+    position: relative;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .notch {
+    position: absolute;
+    top: 0.6rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 30%;
+    height: 1.2rem;
+    background-color: black;
+    border-radius: 1rem;
+  }
+
+  .volumeButtons {
+    position: absolute;
+    top: 20%;
+    left: -0.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .volumeUp,
+  .volumeDown {
+    height: 3rem;
+    width: 0.2rem;
+    background-color: black;
+  }
+
+  .holdButton {
+    position: absolute;
+    top: 25%;
+    right: -0.2rem;
+    height: 4rem;
+    width: 0.2rem;
+    background-color: black;
+  }
+  .content {
+    max-width: 14rem;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: calc(variable.$gap-xl / 2);
+
+    & h3 {
+      text-transform: uppercase;
+      font-size: variable.$font-l;
+      font-weight: 900;
+      color: variable.$secondary-color;
+    }
+
+    & > * {
+      text-align: center;
+    }
+  }
+
+  .svg {
+    position: absolute;
+    bottom: -30%;
+    left: -50%;
+  }
+}
+
+
+.iphone__responsive {
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  .container {
+    width: 14rem;
+    .outerFrame {
+      transform: translateX(40%);
+    }
+  }
+  .content {
+    margin-inline: variable.$gap-xl;
+    gap: variable.$gap-xl;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    & h3 {
+      text-transform: uppercase;
+      font-size: variable.$font-xl;
+      font-weight: 900;
+      color: variable.$secondary-color;
+    }
+
+    & > * {
+      text-align: left;
+    }
+  }
+}

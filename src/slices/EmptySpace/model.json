@@ -1,0 +1,52 @@
+{
+  "id": "empty_space",
+  "type": "SharedSlice",
+  "name": "EmptySpace",
+  "description": "EmptySpace",
+  "variations": [
+    {
+      "id": "default",
+      "name": "space",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "visible": {
+          "type": "Boolean",
+          "config": {
+            "label": "visible",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "size": {
+          "type": "Select",
+          "config": {
+            "label": "size",
+            "placeholder": "",
+            "options": [
+              "small",
+              "medium",
+              "big"
+            ]
+          }
+        },
+        "color": {
+          "type": "Select",
+          "config": {
+            "label": "color",
+            "placeholder": "",
+            "options": [
+              "white",
+              "black",
+              "green"
+            ]
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

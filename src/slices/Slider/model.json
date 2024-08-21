@@ -1,0 +1,35 @@
+{
+  "id": "slider",
+  "type": "SharedSlice",
+  "name": "Slider",
+  "description": "Slider",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "words": {
+          "type": "Group",
+          "config": {
+            "label": "words",
+            "repeat": true,
+            "fields": {
+              "word": {
+                "type": "Text",
+                "config": {
+                  "label": "word",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

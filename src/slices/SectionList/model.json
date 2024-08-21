@@ -1,0 +1,42 @@
+{
+  "id": "section_list",
+  "type": "SharedSlice",
+  "name": "SectionList",
+  "description": "SectionList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "list": {
+          "type": "Group",
+          "config": {
+            "label": "list",
+            "repeat": true,
+            "fields": {
+              "value": {
+                "type": "Text",
+                "config": {
+                  "label": "value",
+                  "placeholder": ""
+                }
+              },
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "text",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

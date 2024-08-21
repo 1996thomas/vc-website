@@ -1,0 +1,59 @@
+{
+  "id": "sided_heading",
+  "type": "SharedSlice",
+  "name": "SidedHeading",
+  "description": "SidedHeading",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "rows": {
+          "type": "Group",
+          "config": {
+            "label": "rows",
+            "repeat": true,
+            "fields": {
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "text",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "background": {
+          "type": "Select",
+          "config": {
+            "label": "background",
+            "placeholder": "",
+            "options": [
+              "black",
+              "white",
+              "green"
+            ]
+          }
+        },
+        "textcolor": {
+          "type": "Select",
+          "config": {
+            "label": "textColor",
+            "placeholder": "",
+            "options": [
+              "white",
+              "black",
+              "green"
+            ]
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

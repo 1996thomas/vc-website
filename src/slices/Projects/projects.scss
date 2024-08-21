@@ -1,0 +1,91 @@
+@use "../../app/sass/variable";
+
+.projects {
+  margin-top: calc(variable.$gap-xl * 3);
+  margin-bottom: variable.$gap-xl;
+  text-transform: uppercase;
+  height: calc(100vh - variable.$gap-xl * 4);
+  display: flex;
+  margin-bottom: 30rem;
+  .projects__wrapper {
+    padding-inline: variable.$gap-xl;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto 1fr;
+    gap: calc(variable.$gap-xl * 4);
+    .content {
+      word-break: break-all;
+      display: flex;
+      flex-direction: column;
+      gap: variable.$gap-xl;
+      > :nth-child(1) {
+        font-size: variable.$font-s;
+      }
+      > :nth-child(2) {
+        font-size: variable.$font-m;
+        font-weight: 900;
+        line-height: 0.8;
+      }
+      > :nth-child(3) {
+        font-size: variable.$font-xl;
+        font-weight: 900;
+      }
+      > :nth-child(4) {
+        display: flex;
+        font-size: variable.$font-s;
+        font-weight: 700;
+        gap: calc(variable.$gap-xl / 2);
+      }
+      > :nth-child(5) {
+        font-weight: 300;
+        font-size: variable.$font-s;
+        line-height: variable.$line-height--paragraph;
+      }
+    }
+
+    .image__wrapper {
+      width: auto;
+      height: 100%;
+      max-height: 80vh;
+      transform: translateX(-50%);
+      img {
+        width: auto;
+        height: 100%;
+      }
+    }
+
+    .info {
+      display: flex;
+      justify-content: flex-end;
+      height: fit-content;
+      align-items: center;
+      padding-top: variable.$gap-xl;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: calc(variable.$gap-xl);
+        justify-content: center;
+
+        li {
+          text-align: end;
+          display: flex;
+          flex-direction: column;
+          gap: calc(variable.$gap-xl / 2);
+          border-bottom: variable.$border-dark;
+          padding-bottom: variable.$gap-xl;
+          :nth-child(1) {
+            font-weight: 900;
+            font-size: variable.$font-l;
+            line-height: 0.8;
+          }
+          :nth-child(2) {
+            font-size: calc(variable.$font-m * 0.6);
+          }
+          &:nth-last-child(1) {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}

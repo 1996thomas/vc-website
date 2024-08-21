@@ -1,0 +1,15 @@
+@use "../../app/sass/variable";
+
+.empty_space {
+  width: 100%;
+}
+.small {
+  height: calc(variable.$gap-xl * 2);
+}
+
+.medium {
+  height: calc(variable.$gap-xl);
+}
+.big {
+  height: calc(variable.$gap-xl * 1.3);
+}

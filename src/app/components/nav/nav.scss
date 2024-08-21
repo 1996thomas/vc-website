@@ -1,0 +1,128 @@
+@use "../../sass/variable";
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  font-size: variable.$font-s;
+  background-color: variable.$background-white;
+  z-index: 100;
+
+  &--default {
+    background-color: variable.$background-white;
+    color: black;
+  }
+
+  &--scrolled {
+    position: fixed;
+    background-color: black;
+    color: white;
+    animation: push 0.2s ease;
+  }
+
+  .nav__wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-inline: variable.$gap-xl;
+
+    ul {
+      display: flex;
+      flex: 2;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      gap: variable.$gap-xl;
+    }
+
+    > div {
+      flex: 1;
+    }
+
+    .button__wrapper {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  .image__wrapper {
+    a {
+      display: flex;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .nav {
+    .nav__wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .slide {
+      background-color: variable.$secondary-color;
+      height: 100svh;
+      width: 100%;
+      position: fixed;
+      transform: translateX(100%);
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: calc(variable.$gap-xl * 2);
+      ul {
+        display: flex;
+        position: static;
+        flex-direction: column;
+        font-size: variable.$font-xl;
+        font-weight: 900;
+        width: fit-content;
+        margin-top: 80px;
+        flex: 0;
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-bottom: variable.$border-dark;
+          width: 100%;
+        }
+        :last-child {
+          border-bottom: none;
+        }
+      }
+      a:last-of-type {
+        background-color: variable.$primary-color;
+        color: variable.$background-white;
+      }
+      .arrow--icon {
+        background-color: variable.$primary-color;
+      }
+    }
+    .menu {
+      z-index: 1000;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      max-height: 80px;
+      .menu--btn {
+        border: none;
+        width: 80px;
+        height: 5px;
+        transform: rotate(-45deg);
+        background-color: variable.$primary-color;
+      }
+    }
+  }
+}
+
+@keyframes push {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

@@ -1,0 +1,23 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"visible": {
+				"__TYPE__": "BooleanContent",
+				"value": false
+			},
+			"size": {
+				"__TYPE__": "FieldContent",
+				"value": "big",
+				"type": "Select"
+			},
+			"color": {
+				"__TYPE__": "FieldContent",
+				"value": "white",
+				"type": "Select"
+			}
+		},
+		"items": []
+	}
+]

@@ -1,0 +1,11 @@
+@use "../../app/sass/variable";
+
+.sided_heading {
+  padding: variable.$gap-xl variable.$gap-xl;
+  text-transform: uppercase;
+
+  p {
+    font-size: variable.$font-xl;
+    font-weight: 900;
+  }
+}

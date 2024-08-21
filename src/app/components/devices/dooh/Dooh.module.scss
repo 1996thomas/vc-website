@@ -1,0 +1,85 @@
+@use "../../../sass/variable";
+.container {
+  width: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.outerFrame {
+  width: 100%;
+  aspect-ratio: 9/16;
+  padding: 0.8rem;
+  background-color: black;
+  position: relative;
+}
+
+.innerFrame {
+  height: 100%;
+  position: relative;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.baseTop {
+  height: 3rem;
+  width: 80%;
+  background-color: black;
+  border-top: 2px solid white;
+}
+
+.baseBottom {
+  height: 0.5rem;
+  width: 100%;
+  background-color: black;
+}
+
+.content {
+  margin: 0 20px;
+  max-width: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: calc(variable.$gap-xl / 2);
+  & h3 {
+    text-transform: uppercase;
+    font-size: variable.$font-l;
+    font-weight: 900;
+    color: variable.$secondary-color;
+  }
+
+  & p {
+    font-size: variable.$font-s;
+  }
+
+  & > * {
+    text-align: center;
+  }
+}
+
+.svg {
+  position: absolute;
+  bottom: -40%;
+  right: -50%;
+}
+.dooh__responsive {
+  display: grid;
+  transform: translateX(-25%);
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  .container {
+    max-width: 13rem;
+  }
+  .content {
+    width: 100%;
+    align-self: center;
+    & h3 {
+      font-size: variable.$font-xl;
+    }
+    & > * {
+      text-align: left;
+    }
+  }
+}

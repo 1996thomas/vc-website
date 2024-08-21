@@ -1,0 +1,60 @@
+{
+  "id": "projects_list",
+  "type": "SharedSlice",
+  "name": "ProjectsList",
+  "description": "ProjectsList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "projectslist": {
+          "type": "Group",
+          "config": {
+            "label": "ProjectsList",
+            "repeat": true,
+            "fields": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "label": "Image",
+                  "constraint": {},
+                  "thumbnails": []
+                }
+              },
+              "client": {
+                "type": "Text",
+                "config": {
+                  "label": "Client",
+                  "placeholder": ""
+                }
+              },
+              "technics": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "Technics",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph"
+                }
+              },
+              "video": {
+                "type": "Link",
+                "config": {
+                  "label": "Video",
+                  "placeholder": "",
+                  "select": "media"
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+@use "../../sass/variable";
+
+footer {
+  height: 66.66svh;
+  background-color: variable.$primary-color;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  .footer__wrapper {
+    width: 100%;
+    display: flex;
+    padding: variable.$gap-xl variable.$gap-xl calc(variable.$gap-xl * 3)
+      variable.$gap-xl;
+    color: variable.$background-white;
+    gap: calc(variable.$gap-xl * 2);
+    > div {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      > ul {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      h3 {
+        font-size: calc(variable.$font-m * 1.1);
+        text-transform: uppercase;
+        font-weight: 700;
+        padding-bottom: variable.$gap-xl;
+      }
+    }
+    .contact__wrapper {
+      justify-content: space-between;
+      .socials {
+        display: flex;
+        gap: calc(variable.$gap-xl / 4);
+        a {
+          width: 50px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border: variable.$border-light;
+        }
+      }
+    }
+
+    .logo__wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    height: 10px;
+    background-color: variable.$secondary-color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.footer--marquee__wrapper {
+  text-transform: uppercase;
+  width: 110vw;
+  max-height: 200px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-1%, -10%) rotate(1.4deg);
+  z-index: 0;
+  transform-origin: center;
+  .footer-marquee--item {
+    font-size: variable.$font-l;
+    font-weight: 700;
+    padding-block: calc(variable.$gap-xl / 2);
+    position: absolute;
+    background-color: variable.$secondary-color;
+    color: variable.$primary-color;
+    z-index: 3;
+    > div {
+      transform-origin: center;
+    }
+  }
+}
+
+@media screen and (max-width: variable.$screen-tablet) {
+  footer {
+    height: max-content;
+    padding-top: variable.$gap-xl;
+    .footer__wrapper {
+      flex-direction: column;
+      align-items: center;
+      > div {
+        ul {
+          align-items: center;
+          gap: variable.$gap-xl;
+          li {
+            text-align: center;
+          }
+        }
+        h3 {
+          padding-top: variable.$gap-xl;
+        }
+        align-items: center;
+      }
+      .contact__wrapper {
+        .contact {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

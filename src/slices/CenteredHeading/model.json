@@ -1,0 +1,35 @@
+{
+  "id": "centered_heading",
+  "type": "SharedSlice",
+  "name": "CenteredHeading",
+  "description": "CenteredHeading",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "content": {
+          "type": "Group",
+          "config": {
+            "label": "content",
+            "repeat": true,
+            "fields": {
+              "text": {
+                "type": "Text",
+                "config": {
+                  "label": "text",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

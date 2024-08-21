@@ -1,0 +1,58 @@
+@use "../../app/sass/variable";
+
+.marquee {
+  position: relative;
+  height: 30rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 0;
+
+  span {
+    flex: 1;
+    height: 100%;
+    width: 100vw;
+  }
+
+  .marquee--item {
+    text-transform: uppercase;
+    font-size: variable.$font-l;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 200vw;
+    font-weight: 700;
+    padding-block: calc(variable.$gap-xl / 2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: variable.$secondary-color;
+    color: variable.$primary-color;
+    > div {
+      transform-origin: center;
+    }
+  }
+
+  .inverse-color {
+    color: variable.$secondary-color;
+    background-color: variable.$primary-color;
+  }
+
+  #marquee-0 {
+    transform: translate(-50%, -50%) rotate(1.4deg);
+    z-index: 3;
+  }
+  #marquee-1 {
+    transform: translate(-50%, -50%) rotate(-5.5deg);
+    z-index: 2;
+  }
+  #marquee-2 {
+    transform: translate(-50%, -50%) rotate(-0.5deg);
+    z-index: 1;
+    top: 26%;
+  }
+}
+
+@media screen and (max-width: variable.$screen-tablet) {
+  .marquee {
+    height: 15rem;
+  }
+}
